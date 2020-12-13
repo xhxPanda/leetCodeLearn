@@ -29,7 +29,6 @@ public class BinarySearchTreeIterator {
         }
     }
 
-    /** @return whether we have a next smallest number */
     public boolean hasNext() {
         if(valList.size() > 0){
             return true;
