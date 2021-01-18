@@ -13,7 +13,6 @@ public class BinarySearchTreeIterator {
         stack = new Stack<TreeNode>();
         valList = new LinkedList<Integer>();
 
-        // stack.push(root);
         //条件很重要
         while(stack.size() != 0 || root != null){
             if(root != null){
@@ -41,6 +40,7 @@ public class BinarySearchTreeIterator {
     public int next() {
         return valList.poll();
     }
+
     class TreeNode {
       int val;
       TreeNode left;
