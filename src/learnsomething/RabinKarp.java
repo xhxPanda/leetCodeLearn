@@ -29,9 +29,4 @@ public class RabinKarp {
 
         return -1;
     }
-
-    private boolean ensureMathing(int i, String str, String pattern) {
-        String strSub = str.substring(i, i + pattern.length());
-        return strSub.equals(pattern);
-    }
 }
