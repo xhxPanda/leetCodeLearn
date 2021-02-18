@@ -1,4 +1,4 @@
-package janchallange;
+package febchallange;
 
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {

@@ -1,4 +1,4 @@
-package janchallange;
+package febchallange;
 
 public class ArithmeticSlices {
     public int numberOfArithmeticSlices(int[] A) {
