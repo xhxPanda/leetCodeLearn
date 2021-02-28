@@ -16,7 +16,7 @@ public class FreqStack {
         freq++;
         map.put(x, freq);
         if (freq > stacks.size()) {
-            Stack<Integer> stack = new Stack<>()
+            Stack<Integer> stack = new Stack<>();
             stack.push(x);
             stacks.add(stack);
         } else {
