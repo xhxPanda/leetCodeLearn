@@ -1,7 +1,5 @@
 package decemberchallange;
 
-import java.util.Arrays;
-
 public class NextGreaterElementThree {
     public int nextGreaterElement(int n) {
         String str = String.valueOf(n);
