@@ -14,10 +14,10 @@ public class DesignCircularQueue {
     }
 
     public boolean enQueue(int value) {
-        if (isFull() == true) {
+        if (isFull()) {
             return false;
         }
-        if (isEmpty() == true) {
+        if (isEmpty()) {
             head = 0;
         }
         tail = (tail + 1) % size;
@@ -50,12 +50,10 @@ public class DesignCircularQueue {
             return -1;
         }
         return data[tail];
-
     }
 
     public boolean isEmpty() {
         return head == -1;
-
     }
 
     public boolean isFull() {
