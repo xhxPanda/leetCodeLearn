@@ -17,18 +17,17 @@ public class NumberSubmatricesThatSumTarget {
                 for (int k = 0; k < n; k++) { // j每次增加一格，k从上到下，都要加入对应的array[k];
                     array[k] += matrix[k][j]; // 把每一行k, [i,j] sum起来；
                 }
+                res += subarraySum(array, target);
             }
         }
-
         return res;
     }
 
-    private int subarraySum(int[] nums, int k) {
-        if(nums == null || nums.length == 0) {
+    public int subarraySum(int[] nums, int k) {
+        if (nums == null || nums.length == 0) {
             return 0;
         }
-
-        Map<Integer, Integer> hashMap = new HashMap<>();
+        HashMap<Integer, Integer> hashmap = new HashMap<>();
         int sum = 0;
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -36,10 +35,10 @@ public class NumberSubmatricesThatSumTarget {
             if (sum == k) {
                 count++;
             }
-            if (hashMap.containsKey(sum - k)) {
-                count += hashMap.get(sum - k);
+            if (hashmap.containsKey(sum - k)) {
+                count += hashmap.get(sum - k);
             }
-            hashMap.put(sum, hashMap.getOrDefault(sum, 0) + 1);
+            hashmap.put(sum, hashmap.getOrDefault(sum, 0) + 1);
         }
         return count;
     }

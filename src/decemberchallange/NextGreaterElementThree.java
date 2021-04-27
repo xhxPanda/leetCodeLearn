@@ -6,7 +6,7 @@ public class NextGreaterElementThree {
         int[] nums = new int[str.length()];
         char[] charList = str.toCharArray();
         for (int i = 0; i < str.length(); i++) {
-            nums[i] = Integer.valueOf(String.valueOf(charList[i]));
+            nums[i] = Integer.parseInt(String.valueOf(charList[i]));
         }
 
         int index = nums.length - 1;
@@ -24,16 +24,10 @@ public class NextGreaterElementThree {
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (int j = 0; j < nums.length; j++) {
-            stringBuilder.append(nums[j]);
+        for (int num : nums) {
+            stringBuilder.append(num);
         }
 
-        Integer i = Integer.valueOf(stringBuilder.toString());
-        return i;
-    }
-
-    public static void main(String[] args) {
-        NextGreaterElementThree elementThree = new NextGreaterElementThree();
-        elementThree.nextGreaterElement(12);
+        return Integer.parseInt(stringBuilder.toString());
     }
 }
