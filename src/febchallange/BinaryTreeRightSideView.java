@@ -8,7 +8,7 @@ import java.util.Queue;
 public class BinaryTreeRightSideView {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        if(root == null) return result;
+        if (root == null) return result;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
@@ -18,13 +18,13 @@ public class BinaryTreeRightSideView {
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
             count--;
-            if(node.left != null) {
+            if (node.left != null) {
                 queue.offer(node.left);
-                helper ++;
+                helper++;
             }
-            if(node.right != null) {
+            if (node.right != null) {
                 queue.offer(node.right);
-                helper ++;
+                helper++;
             }
             if (count == 0) {
                 result.add(node.val);
@@ -35,16 +35,23 @@ public class BinaryTreeRightSideView {
 
         return result;
     }
+
     class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-  }
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
 }

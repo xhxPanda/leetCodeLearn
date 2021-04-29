@@ -6,7 +6,7 @@ public class Search2DMatrix2 {
         while (true) {
             if (matrix[x][y] > target) {
                 x--;
-            } else if (matrix[x][y] < target){
+            } else if (matrix[x][y] < target) {
                 ++y;
             } else {
                 return true;

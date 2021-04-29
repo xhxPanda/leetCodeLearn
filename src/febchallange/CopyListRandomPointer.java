@@ -1,7 +1,6 @@
 package febchallange;
 
 public class CopyListRandomPointer {
-
     private Node copyRandomList(Node head) {
         if (head == null) return null;
         Node head2, p2, p = head;
