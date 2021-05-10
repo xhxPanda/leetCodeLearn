@@ -1,9 +1,10 @@
 package janchallange;
 
-public class PathWithMinimumEffort{
+public class PathWithMinimumEffort {
     int m;
     int n;
     private int[][] dir = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
     public int miniEffortPath(int[][] heights) {
         m = heights.length;
         n = heights[0].length;
@@ -21,7 +22,7 @@ public class PathWithMinimumEffort{
     }
 
     private boolean def(int x, int y, int effort, int[][] heights, boolean[][] visited) {
-        if(x == m - 1 && y == n - 1)
+        if (x == m - 1 && y == n - 1)
             return true;
 
         visited[x][y] = true;
@@ -31,7 +32,7 @@ public class PathWithMinimumEffort{
                 if (Math.abs(heights[nx][ny] - heights[x][y]) > effort) {
                     continue;
                 }
-                if(def(nx, ny, effort, heights, visited))
+                if (def(nx, ny, effort, heights, visited))
                     return true;
             }
         }
