@@ -11,14 +11,14 @@ public class PseudoPalindromicPathsBinaryTree {
     }
 
     private void dfs(TreeNode root, int temp) {
-        int n = temp ^ (1<<root.val);
+        int n = temp ^ (1 << root.val);
         if (root.left == null && root.right == null) {
-            if(n == 0 || (n & (n-1)) == 0) {
+            if (n == 0 || (n & (n - 1)) == 0) {
                 ans++;
             }
             return;
         }
-        if(root.left != null) {
+        if (root.left != null) {
             dfs(root.left, n);
         }
         if (root.right != null) {

@@ -14,14 +14,14 @@ public class BurstBalloons {
                     int l = i > 0 ? nums[i - 1] : 1;
                     int r = j < n - 1 ? nums[j + 1] : 1;
 
-                    int left = k - 1 >= i ? dp[i][k-1] : 0;
-                    int right = k + 1 <= j ? dp[k+1][j] : 0;
+                    int left = k - 1 >= i ? dp[i][k - 1] : 0;
+                    int right = k + 1 <= j ? dp[k + 1][j] : 0;
 
-                    dp[i][j] = Math.max(dp[i][j], l * nums[k]*r + left + right);
+                    dp[i][j] = Math.max(dp[i][j], l * nums[k] * r + left + right);
                 }
 
             }
         }
-        return dp[0][n-1];
+        return dp[0][n - 1];
     }
 }

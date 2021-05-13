@@ -21,7 +21,6 @@ public class LinkedListRandomNode {
             }
         }
         return res;
-
     }
 
     class ListNode {
