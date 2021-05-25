@@ -14,7 +14,7 @@ public class NextPermutation {
             }
         }
 
-        for (int k = right; k >= 0 ; k--) {
+        for (int k = right; k >= 0; k--) {
             if (j > 0 && nums[k] > nums[j - 1]) {
                 swapArray(nums, j - 1, k);
                 break;

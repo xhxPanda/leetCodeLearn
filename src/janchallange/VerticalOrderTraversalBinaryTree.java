@@ -39,6 +39,7 @@ public class VerticalOrderTraversalBinaryTree {
         helper(root.left, row + 1, col - 1);
         helper(root.right, row + 1, col + 1);
     }
+
     class TreeNode {
       int val;
       TreeNode left;

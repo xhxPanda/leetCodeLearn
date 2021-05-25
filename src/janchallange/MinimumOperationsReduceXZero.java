@@ -13,7 +13,7 @@ public class MinimumOperationsReduceXZero {
         }
         if (sum == x) {
             return nums.length;
-        } else if(sum < x) {
+        } else if (sum < x) {
             return -1;
         }
 

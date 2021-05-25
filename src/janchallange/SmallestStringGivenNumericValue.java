@@ -9,8 +9,8 @@ public class SmallestStringGivenNumericValue {
 
         k -= n;
 
-        for (int i = chs.length - 1; i >=0;i--) {
-            if(k <=0) {
+        for (int i = chs.length - 1; i >= 0; i--) {
+            if (k <= 0) {
                 break;
             }
 
@@ -23,6 +23,7 @@ public class SmallestStringGivenNumericValue {
             }
         }
 
+        System.out.println(chs);
         return new String(chs);
     }
 
