@@ -8,7 +8,7 @@ public class WordLadder {
         List<String> reached = new ArrayList<>();
         reached.add(beginWord);
         Set<String> wordSet = new HashSet<>(wordList);
-        if(!wordSet.contains(endWord)) return 0;
+        if (!wordSet.contains(endWord)) return 0;
         wordSet.add(endWord);
 
         int distance = 1;
@@ -29,7 +29,7 @@ public class WordLadder {
                 }
             }
             distance++;
-            if(toAdd.size() == 0) {
+            if (toAdd.size() == 0) {
                 return 0;
             }
             reached = toAdd;
