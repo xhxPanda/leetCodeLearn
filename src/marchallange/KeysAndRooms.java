@@ -8,7 +8,7 @@ public class KeysAndRooms {
         dfs(rooms, 0, visited);
 
         for (boolean b : visited) {
-            if (b == false) {
+            if (!b) {
                 return false;
             }
         }

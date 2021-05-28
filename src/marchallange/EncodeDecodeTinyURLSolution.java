@@ -17,12 +17,11 @@ public class EncodeDecodeTinyURLSolution {
 
     // Decodes a shortened URL to its original URL.
     public String decode(String shortUrl) {
-        String s="";
-        for(Map.Entry<String , String> entry : map.entrySet())
-        {
-            if(entry.getValue().equals(shortUrl))
-                s=  s+entry.getKey();
+        StringBuilder s = new StringBuilder();
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            if (entry.getValue().equals(shortUrl))
+                s.append(entry.getKey());
         }
-        return s;
+        return s.toString();
     }
 }
