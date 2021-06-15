@@ -17,7 +17,26 @@ public class MatchsticksSquare {
 
         Arrays.sort(matchsticks);
         reverse(matchsticks);
-        return true;
+        return dfs(sides, matchsticks, 0, side);
+    }
+
+    private boolean dfs(int[] sides, int[] matchsticks, int index, int side) {
+        if (index == matchsticks.length) {
+            if (sides[0] == side && sides[1] == side && sides[2] == side)
+                return true;
+            return false;
+        }
+        for (int i = 0; i < 4; i++) {
+            if (sides[i] + matchsticks[index] > side) {
+                continue;
+            }
+            sides[i] += matchsticks[index];
+            if (dfs(sides, matchsticks, index + 1, side)) {
+                return true;
+            }
+            sides[i] -= matchsticks[index];
+        }
+        return false;
     }
 
     public void reverse(int[] nums) {
